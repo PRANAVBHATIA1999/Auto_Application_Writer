@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<title> Application Writer! </title>
+	
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+	<!-- Bootstrap core CSS -->
+    <link href="{{url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+	<script src="{{url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="{{url_for('static', filename='css/scrolling-nav.css')}}" rel="stylesheet">
+	
+		<!-- My CSS -->
+
+	<link href="{{url_for('static', filename='css/mycss.css')}}?v={{rand}}" rel = "stylesheet" type="text/css">
+	
+		
+
+	</head>
+	<body>
+	
+	<!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Application Writer</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+	 <!-- <header class=" toptext text-R"> -->
+      <!-- <div class="container text-center"> -->
+        <!-- <h1>Welcome to  auto Application Writer</h1> -->
+        <!-- <p class="lead">A quick application bla bla bla bla bla bla bla bla</p> -->
+      <!-- </div> -->
+    <!-- </header> -->
+		
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<img src="{{url_for('static', filename='images/banner4.jpg')}}" class="img-fluid shadowbanner" style="padding-top: 100px">
+			</div>
+		</div>
+	</div>
+
+
+	
+<div class = "intro_main">
+	<div class="row">
+		<div class="col-md-6 btnGS">
+			<img src="{{url_for('static', filename='images/Whyuse.jpg')}}" class="introimg" alt="Cinque Terre">
+			<!-- Insert label for the heading of the paara -->
+		 <div class="label">
+			 Why to use?
+		 </div>
+		<div class= "imgtxt">
+	<pre>
+Satisfied conveying an dependent contented he
+ gentleman agreeable do be.
+ Warrant private blushes removed
+ an in equally 
+totally if. Delivered d
+ejection necessary objection do mr prevailed.
+ Mr feeling do chiefly c
+ordial in do. Water timed folly right aware </pre>
+
+
+		</div>
+		<div class="text-center btn_space">
+	<button type="button" class=" btncustom btn  btn-primary btn-xl">Get started</button>
+		</div>
+		</div>
+
+<div class="col-md-6 btnKM">
+			<img src="{{url_for('static', filename='images/Whyuse.jpg')}}" class="introimg" alt="Cinque Terre">
+			<!-- Insert label for the heading of the paara -->
+			<div class="label">
+				How to use?
+			</div>
+		<div class= "imgtxt">
+	<pre>
+Satisfied conveying an dependent contented he
+ gentleman agreeable do be.
+ Warrant private blushes removed
+ an in equally 
+totally if. Delivered d
+ejection necessary objection do mr prevailed.
+ Mr feeling do chiefly c
+ordial in do. Water timed folly right aware </pre>
+		</div>
+			<div class="text-center btn_space">
+	<button type="button" class=" btncustom btn  btn-primary btn-xl  ">Know More</button>
+		</div>
+		</div>
+
+  
+	</div>
+</div>
+
+<div class = "apptype_form">
+
+  <div class="jumbotron jumbotron-fluid">
+		<div class="container">
+<div class = "row">
+	<div class = "col-md-6"> 
+		<h1 class="display-4">Application Type: </h1>
+		<p class="lead">Please select the application type you want us to write for you.</p>
+	</div>
+	<div class="col-md-6">
+		<div class="dropdown">
+			<button class="btn btncustom btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"> <!--aria-haspopup="true" aria-expanded="false"-->
+				Select application type<span class="caret"></span>
+			</button>
+			  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="formDropdown">
+				<a class="dropdown-item" href="#" data-form="leave">Leave</a>
+				<a class="dropdown-item" href="#" data-form="apology">Apology</a>
+				<a class="dropdown-item" href="#" data-form="complaint">complaint</a>
+			  </div>
+		</div>
+	</div>
+  </div>
+</div>
+</div>
+<div class ="main_form">
+	<div class = "jumbotron">
+
+		
+
+		<div id="leaveForm" class="d-none formTabs" >
+			<br>
+			<h3>Fill the form:</h3>
+			<div class="formui">
+					<form> 
+						<div class="row col-md-12">
+								<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+											<div class="dropdown-menu">
+												<a class="dropdown-item" href="#">The Dean</a>
+												<a class="dropdown-item" href="#">The Principal</a>
+											</div>
+										</div>
+										<input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Name or College/School Address">
+									</div>
+									<div class="input-group">
+											<div class="input-group-prepend">
+												<span class="input-group-text">Sender's Name:</span>
+											</div>
+											<input type="text" aria-label="First name" placeholder="First Name" class="form-control">
+											<input type="text" aria-label="Last name" placeholder="Last Name" class="form-control">
+										</div>
+
+										<div class="input-group">
+												<div class="input-group-prepend">
+													<span class="input-group-text">Class & Roll No.</span>
+												</div>
+												<input type="text" aria-label="First name" placeholder="Class" class="form-control">
+												<input type="text" aria-label="Last name" placeholder="Roll Number" class="form-control">
+											</div>
+						</div>
+						
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text">Date:</span>
+										</div>
+										<input type="text" aria-label="First name" placeholder="From" class="form-control">
+										<input type="text" aria-label="Last name" placeholder="Till" class="form-control">
+								</div>
+							</div>
+							<div class="col-md-4">
+									<div class="form-group row">
+											<label for="inputEmail3" class="col-sm-2 col-form-label">Days</label>
+											<div class="col-sm-10">
+												<input type="email" class="form-control" id="inputEmail3" placeholder="Number of Days">
+											</div>
+									</div>
+							</div>
+						</div>
+								<br>
+
+							<div class="row">
+								<div class="col-md-1"> 
+										<button type="submit" class="btn btn-primary">Submit</button>
+								</div>
+								<div class="col-md-1">
+										<button type="submit" class="btn btn-primary">Reset</button>
+								</div>
+							</div>
+
+						
+					</form>
+			</div>
+		</div>
+		<div id="apologyForm"   class="d-none formTabs" >Apology Form</div>
+    <div id="complaintForm" class="d-none formTabs" >Complaint Form</div>
+		</div>
+		</div>
+		</div>
+
+
+<div class="content_end" id="about" >
+	<div class="jumbotron-fluid">
+		<h1 class="display-3" >About Us<h1>
+			<p class="belowheading"> Just an incredible simple tool for free applications.</p>
+		</div>
+		<p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information
+		This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or informationThis is a simple h
+		ero unit, a simple jumbotron-style component for calling extra attention to featured content or informationThis is a simple hero unit, a simple jumbotron-style 
+		component for calling extra attention to featured content or informationThis is a simple hero unit, a simple jumbotron-style component for calling extra atte
+		ntion to featured content or informationThis is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or inf
+		ormationThis is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or informationThis is a simple hero 
+		unit, a simple jumbotron-style component for calling extra attention to featured content or informationThis is a simple hero unit, a simple jumbotron-style
+		component for calling extra attention to featured content or informationThis is a simple hero unit, a simple jumbotron-style component for calling
+		extra attention to featured content or information.</p>
+	
+	<div class="Conatctus" id="contact"> 
+		<h1 class="display-3">Contact Us<h1>
+			<p class="belowheading"> Please fil the form below and we'll get back to you ASAP.</p>
+			<br>
+		<form>
+		<div class="form-row">
+			<div class="form-group col-md-6">
+				<input type="text" class="form-control" placeholder="NAME">
+			</div>
+			<div class="form-group col-md-6">
+				<input type="text" class="form-control" placeholder="EMAIL">
+			</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<input type="text" class="form-control" placeholder="SUBJECT">	
+	</div>
+		<div class="form-group">
+			<textarea class="form-control" rows="7"placeholder="MESSAGE" id="message-box"></textarea>
+		</div>
+			<div class="form-group row">
+				<div class="col-sm-10">
+					<button type="submit" class="formbtn btn btn-primary btncustom">SEND</button>
+					<button type="submit" class="btn btn-primary btncustom">RESET</button>
+    </div>
+  </div>
+		
+</div>
+</div>
+<div class="content_footer">
+</div>
+    <footer id="myFooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h3 class="logo"><a href="#"> APPLICATION WRITER </a></h3>
+                </div>
+                <div class="col-sm-2">
+                    <h5>Get started</h5>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Sign up</a></li>
+                        <li><a href="#">Downloads</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h5>About us</h5>
+                    <ul>
+                        <li><a href="#">Company Information</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Help desk</a></li>
+                        <li><a href="#">Forums</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <div class="social-networks">
+                        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
+                    </div>
+                    <button type="button" class="btntxt btn btn-default">Contact us</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2018 Copyright Text </p>
+        </div>
+    </footer>
+
+	
+
+	
+	</body>
+	</html>
+
+	<script src="{{url_for('static', filename='js/form.js')}}"></script>

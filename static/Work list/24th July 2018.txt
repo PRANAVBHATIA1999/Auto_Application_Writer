@@ -1,0 +1,62 @@
+To-do List (24th July, 2018)
+
+1) Name of the website
+	-Name should explain the purpose of the website and should be attractive.
+	-should be small
+	- Eg. Hotel booking
+		- makemytrip.com, Yaatra.com, cleartrip etc
+2) Tagline 
+	- I've thought of "An incredible tool for writing applications" 
+	Give your opinion on this and try to look for something better.
+
+
+2) Content for "Why to use?" & "How to use?"
+	- Not more than a small paragraph (Look, what i've marked on the picture which ive sent you on whatsapp,
+					   you'll be able to figure out the approx number of characters.
+					   You can increase the number of lines if you wish to)
+
+3) In the initial stage we'll be launching the website with just 5 types of applications which includes the following:
+
+	1) Leave Application
+	2) Apology Application 
+
+	(find the other 3 types)
+
+
+	
+ The above work should be finished by Thursday, 26th July 2018.
+					Update: Monday, 30th July 2018. (Extension)
+
+
+
+
+
+__________________________________________________________________________________________-
+
+To-DO List (Pranav)
+
+1) Start learning Flask
+2) UI Form 
+	- Senders name
+	- recievers name
+	- Date/period
+	- Reason (user's input)	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
