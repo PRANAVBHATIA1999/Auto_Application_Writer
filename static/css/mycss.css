@@ -287,8 +287,8 @@ body{
 #first.about_us  {
     margin-top: 180px;
 }
-#second.about_us {
-    margin-bottom: 50px;
+.about_us#second {
+    margin-bottom: 500px;
 }
     
 .person_photo {
