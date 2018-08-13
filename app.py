@@ -30,8 +30,11 @@ def application():
         para5c = 'I shall be utterly obliged for this. <br> <br>'
         para6 = 'Yours obediently,'
         print(address, first_name, last_name, senders_class, rno,  date_from, date_till, days, app_date)
-        return para1 + address + brk +  para2 + app_date + para3 + para4 + para5a + days + para5b + date_from + to + date_till + para5c + para6 + brk + first_name + space + last_name + brk + senders_class + brk + rno
-       
+        leave_letter = para1 + address + brk +  para2 + app_date + para3 + para4 + para5a + days + para5b + date_from + to + date_till + para5c + para6 + brk + first_name + space + last_name + brk + senders_class + brk + rno
+        return leave_letter
+        # para1 + address + brk +  para2 + app_date + para3 + para4 + para5a + days + para5b + date_from + to + date_till + para5c + para6 + brk + first_name + space + last_name + brk + senders_class + brk + rno
+
+
 
         #next line 
 # shitttt, kal 1-2 hrs waste kiye. 
