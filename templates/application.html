@@ -51,7 +51,8 @@
           </ul>
         </div>
       </div>
-    </nav>
+		</nav>
+		
 	 <!-- <header class=" toptext text-R"> -->
       <!-- <div class="container text-center"> -->
         <!-- <h1>Welcome to  auto Application Writer</h1> -->
@@ -62,7 +63,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
-				<img src="{{url_for('static', filename='images/banner4.jpg')}}" class="img-fluid shadowbanner" style="padding-top: 100px">
+				<img src="{{url_for('static', filename='images/banner4.jpg')}}" class="img-fluid banner_top">
 			</div>
 		</div>
 	</div>
@@ -80,13 +81,12 @@
 		<div class= "imgtxt">
 	
 			After coming from school/college in the aternoon, going for tuition in the evening, completing your pending work in the night, after all this do you really want to spend more time writing an application and finding the correct format for it or just get it done with a few clicks with zero cost and zero effort?
-			Choice is yours.
-
-
+			Choice is yours. <br>
+			<br>
 
 		</div>
 		<div class="text-center btn_space">
-	<button type="button" class=" btncustom btn  btn-primary btn-xl">Get started</button>
+	<button type="button" class=" btncustom btn  btn-primary btn-xl"> <a href="#get_started">Get started</a></button>
 		</div>
 		</div>
 
@@ -98,17 +98,13 @@
 			</div>
 		<div class= "imgtxt">
 	
-Satisfied conveying an dependent contented he
- gentleman agreeable do be.
- Warrant private blushes removed
- an in equally 
-totally if. Delivered d
-ejection necessary objection do mr prevailed.
- Mr feeling do chiefly c
-ordial in do. Water timed folly right aware 
+			Using Application writer is pretty simple. Just 2 steps, no big deal. First select the application type. 
+			Fill the form which will ask for the necessary credentials for your application and your will be generated automatically. Application writer is an incredible tool for every student. 
+			Please write us a feedback and give us a chance to improve.
+			
 		</div>
 			<div class="text-center btn_space">
-	<button type="button" class=" btncustom btn  btn-primary btn-xl  ">Know More</button>
+	<button type="button" class=" btncustom btn  btn-primary btn-xl  "> <a href = "#know_more">Know More</a></button>
 		</div>
 		</div>
 
@@ -116,7 +112,7 @@ ordial in do. Water timed folly right aware
 	</div>
 </div>
 
-<div class = "apptype_form">
+<div class = "apptype_form" id="get_started">
 
   <div class="jumbotron jumbotron-fluid">
 		<div class="container">
@@ -143,8 +139,6 @@ ordial in do. Water timed folly right aware
 <div class ="main_form">
 	<div class = "jumbotron">
 
-		
-
 		<div id="leaveForm" class="d-none formTabs" >
 			<br>
 			<h3>Fill the form:</h3>
@@ -165,7 +159,7 @@ ordial in do. Water timed folly right aware
 											<div class="input-group-prepend">
 												<span class="input-group-text">Sender's Name:</span>
 											</div>
-											<input type="text" aria-label="First name" placeholder="First Name" class="form-control" name="fname">
+											<input type="text " aria-label="First name" placeholder="First Name" class="form-control" name="fname" required >
 											<input type="text" aria-label="Last name" placeholder="Last Name" class="form-control" name="lname" >
 										</div>
 
@@ -224,9 +218,9 @@ ordial in do. Water timed folly right aware
 		</div>
 
 
-<div class="content_end" id="about" >
+<div class="content_end">
 	<div class="jumbotron-fluid">
-		<h1 class="display-3" >About Us<h1>
+		<h1 class="display-3" id="know_more">About Us<h1>
 			<p class="belowheading"> Just an incredible simple tool for free applications.</p>
 		</div>
 		<p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information
