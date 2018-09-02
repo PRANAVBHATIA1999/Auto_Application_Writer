@@ -16,3 +16,27 @@ document.getElementById('formDropdown').onclick = function dropdownClick(event) 
 
     lastForm = form;
 };
+
+function getFormData(evt) {
+
+    if(evt) {
+        evt.preventDefault(); //if evt is present then cancel the default event behaviour 
+    }
+    let data = {};
+    let properties = [
+        'name',
+        'email',
+        'subject',
+        'message'
+    ];
+    let formId = 'contactForm';
+
+    for(let i=0;i<properties.length;i++) {
+        let prop = properties[i];
+        data[prop] = document.getElementById(formId + '_' + prop).value;
+    }
+
+    console.log(data);
+}
+
+document.getElementById('contactForm').onsubmit = getFormData;
