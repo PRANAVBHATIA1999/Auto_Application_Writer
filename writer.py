@@ -22,5 +22,5 @@ def create(address, first_name, last_name, senders_class, rno,  date_from, date_
     doc.add_paragraph(senders_class)
     doc.add_paragraph(rno)
 
-
-    doc.save(str(uuid.uuid4())+'.docx')
+file_rand_name = str(uuid.uuid4())
+    doc.save(file_rand_name+'.docx')

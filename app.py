@@ -38,7 +38,8 @@ def application():
 
 @app.route('/aboutus')
 def aboutus():
-    return render_template("aboutus.html",rand=str(Random.randint(0,1000000)))
+    rand_number = str(Random.randint(0,1000000)))
+    return render_template("aboutus.html",rand_number)
 
 @app.route('/profile' , methods = ['GET', 'POST'])
 def profile():
@@ -53,3 +54,6 @@ def profile():
 
 if __name__ == "__main__":
     app.run(debug=True,)
+
+
+#Hellllooo
