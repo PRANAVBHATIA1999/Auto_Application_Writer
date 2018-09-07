@@ -1,15 +1,18 @@
-from flask import Flask, render_template, request
+import os
 import random as Random
-import writer as writer
 
+from flask import Flask, render_template, request
+from flask import make_response, send_file
+
+import writer as writer
 
 app = Flask(__name__)
 
-@app.route('/' , methods= ['GET' , 'POST' ])
-def application():
 
+@app.route('/', methods=['GET', 'POST'])
+def application():
     if request.method == 'GET':
-        return render_template("application.html", rand=str(Random.randint(0,1000000)))
+        return render_template("application.html", rand=str(Random.randint(0, 1000000)))
     if request.method == 'POST':
         address = request.form['address']
         first_name = request.form['fname']
@@ -20,28 +23,36 @@ def application():
         date_till = request.form['date_till']
         days = request.form['no_days']
         app_date = request.form['app_date']
-        writer.create(address, first_name, last_name, senders_class, rno, date_from, date_till, days, app_date)
-            # Strings
-       
-        # para1 + address + brk +  para2 + app_date + para3 + para4 + para5a + days + para5b + date_from + to + date_till + para5c + para6 + brk + first_name + space + last_name + brk + senders_class + brk + rno
+        f = writer.create(address, first_name, last_name, senders_class, rno, date_from, date_till, days, app_date)
+        f.seek(0)
 
+        return send_file(f, as_attachment=True, attachment_filename='application.doc')
 
+        # Strings
 
-        #next line 
-# shitttt, kal 1-2 hrs waste kiye. 
-# will HTML tages work here?? yes
-# damnn, thankss np bye
-        
+        # para1 + address + brk +  para2 + app_date + para3 + para4 + para5a + days + para5b + date_from + to +
+        # date_till + para5c + para6 + brk + first_name + space + last_name + brk + senders_class + brk + rno
 
-        
-    # return render_template("application.html",rand=str(Random.randint(0,1000000)))
+        # next line
+
+# return render_template("application.html",rand=str(Random.randint(0,1000000)))
+
 
 @app.route('/aboutus')
 def aboutus():
-    rand_number = str(Random.randint(0,1000000)))
-    return render_template("aboutus.html",rand_number)
+    rand_number = str(Random.randint(0, 1000000))
+    return render_template("aboutus.html", rand_number)
 
-@app.route('/profile' , methods = ['GET', 'POST'])
+
+@app.route('/contact')
+def contactus():
+    if request.method == 'POST':
+        # request.form
+        return
+
+
+
+@app.route('/profile', methods=['GET', 'POST'])
 def profile():
     if request.method == 'GET':
         return render_template("form.html")
@@ -53,7 +64,4 @@ def profile():
 
 
 if __name__ == "__main__":
-    app.run(debug=True,)
-
-
-#Hellllooo
+    app.run(debug=True)
