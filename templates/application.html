@@ -40,10 +40,10 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+              <a class="nav-link js-scroll-trigger" href="#know_more">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+              <a class="nav-link js-scroll-trigger" href="#get_started">Services</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
@@ -112,6 +112,8 @@
 	</div>
 </div>
 
+ 
+
 <div class = "apptype_form" id="get_started">
 
   <div class="jumbotron jumbotron-fluid">
@@ -127,94 +129,286 @@
 				Select application type<span class="caret"></span>
 			</button>
 			  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="formDropdown">
-				<a class="dropdown-item" href="#" data-form="leave">Leave</a>
-				<a class="dropdown-item" href="#" data-form="apology">Apology</a>
-				<a class="dropdown-item" href="#" data-form="complaint">complaint</a>
+				<a class="dropdown-item" href="#" data-form="leave">LEAVE LETTER (MEDICAL REASON)</a>
+				<a class="dropdown-item" href="#" data-form="apology">VISA FORM (NOC)</a>
+				<a class="dropdown-item" href="#" data-form="participation">LEAVE FOR AN EVENT</a>
 			  </div>
 		</div>
 	</div>
   </div>
 </div>
 </div>
-<div class ="main_form">
-	<div class = "jumbotron">
+<!-- <div class ="main_form"> -->
+        <div id="leaveForm" class="d-none formTabs" >
+            <div class = "jumbotron main_form">
+                <br>
+                <h3>Fill the form:</h3>
+                <div class="formui">
+                        <form action="/" method="POST">
+                            <div class="row col-md-12">
+                                    <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#">The Dean</a>
+                                                    <a class="dropdown-item" href="#">The Principal</a>
+                                                </div>
+                                            </div>
+                                            <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Name or College/School Address" name="address">
+                                     </div>
+                                        <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">Sender's Name:</span>
+                                                </div>
+                                                <input type="text " aria-label="First name" placeholder="First Name" class="form-control" name="fname" required >
+                                                <input type="text" aria-label="Last name" placeholder="Last Name" class="form-control" name="lname" >
+                                        </div>
+    
+                                            <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">Class & Roll No.</span>
+                                                    </div>
+                                                    <input type="text" aria-label="First name" placeholder="Class" class="form-control" name="senders_cl">
+                                                    <input type="text" aria-label="Last name" placeholder="Roll Number" class="form-control" name="rno">
+                                            </div>
+                                </div>
+                
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">Date:</span>
+                                            </div>
+                                            <input type="text" aria-label="First name" placeholder="From" class="form-control" name="date_from">
+                                            <input type="text" aria-label="Last name" placeholder="Till" class="form-control" name="date_till">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                        <div class="form-group row">
+                                                <label for="inputEmail3" class="col-sm-2 col-form-label">Days</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="inputEmail3" placeholder="Number of Days" name="no_days">
+                                                </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <!-- <label for="inputEmail3" class="col-sm-2 col-form-label">Application submit date</label> -->
+                            <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputEmail3" placeholder="Application Date" name="app_date">
+                            </div>
+                                    <br>
+    
+                                <div class="row">
+                                    <div class="col-md-1"> 
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                    </div>
+                                    <div class="col-md-1">
+                                            <button type="submit" class="btn btn-primary">Reset</button>
+                                    </div>
+								</div>
+							
+                            
+                        </form>
+                </div>
+         </div>
+</div>
 
-		<div id="leaveForm" class="d-none formTabs" >
-			<br>
-			<h3>Fill the form:</h3>
-			<div class="formui">
-					<form target="/" method="POST">
-						<div class="row col-md-12">
-								<div class="input-group mb-3">
-										<div class="input-group-prepend">
-											<button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
-											<div class="dropdown-menu">
-												<a class="dropdown-item" href="#">The Dean</a>
-												<a class="dropdown-item" href="#">The Principal</a>
-											</div>
-										</div>
-										<input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Name or College/School Address" name="address">
-									</div>
-									<div class="input-group">
-											<div class="input-group-prepend">
-												<span class="input-group-text">Sender's Name:</span>
-											</div>
-											<input type="text " aria-label="First name" placeholder="First Name" class="form-control" name="fname" required >
-											<input type="text" aria-label="Last name" placeholder="Last Name" class="form-control" name="lname" >
-										</div>
 
+		<div id="apologyForm"class="d-none formTabs"> 
+				<div class = "main_form">
+						<div class="jumbotron">
+								<br>
+								<h3> Fill the form:</h3>
+								<div class="formui">
+									 <form action="/visaform" method="POST">
+								  
+										<div class="row" >
+										<div class="input-group mb-3">
+												<div class="input-group-prepend">
+												  <span class="input-group-text" id="inputGroup-sizing-default">Country Name: </span>
+												</div>
+												<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Name of the country" name ="country_name">
+											  </div>
+											  <div class="input-group mb-3">
+													<div class="input-group-prepend">
+													  <span class="input-group-text" id="inputGroup-sizing-default">Visit Purpose: </span>
+													</div>
+													<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Purpose Of Visit">
+												</div>
+												<!-- <div class="col-md-12"> -->
+													<div class="input-group">
+															<div class="input-group-prepend">
+																<span class="input-group-text">Date:</span>
+															</div>
+															<input type="text" aria-label="First name" placeholder="From" class="form-control" name="date_from">
+															<input type="text" aria-label="Last name" placeholder="Till" class="form-control" name="date_till">
+													</div>
+												<!-- </div> -->
+										</div>
+										<br>
 										<div class="input-group">
 												<div class="input-group-prepend">
-													<span class="input-group-text">Class & Roll No.</span>
+													<span class="input-group-text">Sender's Name:</span>
 												</div>
-												<input type="text" aria-label="First name" placeholder="Class" class="form-control" name="senders_cl">
-												<input type="text" aria-label="Last name" placeholder="Roll Number" class="form-control" name="rno">
+												<input type="text " aria-label="First name" placeholder="First Name" class="form-control" name="fname" required >
+												<input type="text" aria-label="Last name" placeholder="Last Name" class="form-control" name="lname" >
 											</div>
-						</div>
-						
-						</div>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="input-group">
-										<div class="input-group-prepend">
-											<span class="input-group-text">Date:</span>
+					
+											<div class="input-group">
+													<div class="input-group-prepend">
+														<span class="input-group-text">Class & Roll No.</span>
+													</div>
+													<input type="text" aria-label="First name" placeholder="Class" class="form-control" name="senders_cl">
+													<input type="text" aria-label="Last name" placeholder="Roll Number" class="form-control" name="rno">
+												</div>
+										<div class="row col-md-12" >
+												<div class="input-group mb-3">
+														<div class="input-group-prepend">
+														  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+														  <div class="dropdown-menu">
+															<a class="dropdown-item" href="#">The Dean</a>
+															<a class="dropdown-item" href="#">The Principal</a>
+														  </div>
+														</div>
+														<input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Name or College/School Address" name="address">
+												</div>
+					
+												<label for="inputEmail3" class="col-sm-2 col-form-label">Application submit date</label>
+												<div class="col-sm-10">
+												<input type="text" class="form-control" id="inputEmail3" placeholder="Application Date" name="app_date">
+												</div>
+												
+														<div class="col-sm-4 form_button_last">
+															<button type="submit" class="formbtn btn btn-primary btncustom">SEND</button>
+															<button type="submit" class="btn btn-primary btncustom">RESET</button>
+														</div>
+										  </div>
+					
+											   
 										</div>
-										<input type="text" aria-label="First name" placeholder="From" class="form-control" name="date_from">
-										<input type="text" aria-label="Last name" placeholder="Till" class="form-control" name="date_till">
+									</form>
 								</div>
-							</div>
-							<div class="col-md-4">
-									<div class="form-group row">
-											<label for="inputEmail3" class="col-sm-2 col-form-label">Days</label>
-											<div class="col-sm-10">
-												<input type="text" class="form-control" id="inputEmail3" placeholder="Number of Days" name="no_days">
+					</div>
+		</div>
+
+		<div id="participationForm"class="d-none formTabs"> 
+			<div class = "main_form">
+				<div class="jumbotron">
+						<br>
+						<h3> Fill the form:</h3>
+					<div class="formui">
+						<form action="/participation" method="POST">       
+									<div class="row col-md-12">
+										<div class="input-group mb-3">
+												<div class="input-group-prepend">
+													<button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+													<div class="dropdown-menu">
+														<a class="dropdown-item" href="#">The Dean</a>
+														<a class="dropdown-item" href="#">The Principal</a>
+													</div>
+												</div>
+												<input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Name or College/School Address" name="address">
+										 </div>
+											<div class="input-group">
+													<div class="input-group-prepend">
+														<span class="input-group-text">Sender's Name:</span>
+													</div>
+													<input type="text " aria-label="First name" placeholder="First Name" class="form-control" name="fname" required >
+													<input type="text" aria-label="Last name" placeholder="Last Name" class="form-control" name="lname" >
 											</div>
+		
+												<div class="input-group">
+														<div class="input-group-prepend">
+															<span class="input-group-text">Class & Roll No.</span>
+														</div>
+														<input type="text" aria-label="First name" placeholder="Class" class="form-control" name="senders_cl">
+														<input type="text" aria-label="Last name" placeholder="Roll Number" class="form-control" name="rno">
+												</div>
 									</div>
-							</div>
-						</div>
-						<label for="inputEmail3" class="col-sm-2 col-form-label">Application submit date</label>
-						<div class="col-sm-10">
-						<input type="text" class="form-control" id="inputEmail3" placeholder="Application Date" name="app_date">
-						</div>
+					
+								<div class="row">
+									<div class="col-md-6">
+										<div class="input-group">
+												<div class="input-group-prepend">
+													<span class="input-group-text">Date:</span>
+												</div>
+												<input type="text" aria-label="First name" placeholder="From" class="form-control" name="date_from">
+												<input type="text" aria-label="Last name" placeholder="Till" class="form-control" name="date_till">
+										</div>
+									</div>
+								</div>
+
 								<br>
+								<br>
+				
+				
+											<!-- <div class="form-group row">
+													<label for="inputEmail3" class="row-md-6 row-form-label">Total</label>
+													
+														<input type="text" class="form-control" id="inputEmail3" placeholder="Number of Participants" name="no_days">
+													
+											</div> -->
+											<div class="row-md-6">
+											<div class="col-md-6 input-group mb-3">
+													<div class="input-group-prepend">
+													  <span class="input-group-text" id="inputGroup-sizing-default">Total:</span>
+													</div>
+													<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Number of Participants" name="no_of_parti">
+												  </div>
+												</div>
+								<div class="row-md-12">
+										<div class="col-md-6 input-group mb-3">
+												<div class="input-group-prepend">
+												  <span class="input-group-text" id="inputGroup-sizing-default">College:</span>
+												</div>
+												<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Going to" name="college_name_fest">
+											  </div>
+											  <div class="col-md-6 input-group mb-3">
+													<div class="input-group-prepend">
+													  <span class="input-group-text" id="inputGroup-sizing-default">Fest Name:</span>
+													</div>
+													<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Name of the fest" name="fest_name">
+												  </div>
+												  <div class="col-md-6 input-group mb-3">
+														<div class="input-group-prepend">
+														  <span class="input-group-text" id="inputGroup-sizing-default">Competiton Name:</span>
+														</div>
+														<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Name of the Competition" name="compet_name">
+													  </div>
+													  
+													  <div class="col-md-6 input-group mb-3">
+															<div class="input-group-prepend">
+															  <span class="input-group-text" id="inputGroup-sizing-default">Submit Date:</span>
+															</div>
+															<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Date of Submission" name="app_date">
+														  </div>
 
-							<div class="row">
-								<div class="col-md-1"> 
-										<button type="submit" class="btn btn-primary">Submit</button>
 								</div>
-								<div class="col-md-1">
-										<button type="submit" class="btn btn-primary">Reset</button>
-								</div>
-							</div>
+										
+								
+								
+								<!-- <label for="inputEmail3" class="col-sm-2 col-form-label">Application submit date</label>
+								<div class="col-sm-10">
+								<input type="text" class="form-control" id="inputEmail3" placeholder="Application Date" name="app_date">
+								</div> -->
+							
+		
+									<div class="row">
+										<div class="col-md-1"> 
+												<button type="submit" class="btn btn-primary">Submit</button>
+										</div>
+										<div class="col-md-1">
+												<button type="submit" class="btn btn-primary">Reset</button>
+										</div>
+									</div>
+								
+								
+							</form>
+									
 
-						
-					</form>
+					</div>
+				</div>
 			</div>
-		</div>
-		<div id="apologyForm"   class="d-none formTabs" >Apology Form</div>
-    <div id="complaintForm" class="d-none formTabs" >Complaint Form</div>
-		</div>
-		</div>
 		</div>
 
 
@@ -233,25 +427,26 @@
 		component for calling extra attention to featured content or informationThis is a simple hero unit, a simple jumbotron-style component for calling
 		extra attention to featured content or information.</p>
 
-<form id='contactForm' >
+<form method="POST" action="https://formspree.io/application.writer.yo@gmail.com">
 	<div class="Conatctus" id="contact"> 
 		<h1 class="display-3">Contact Us<h1>
 			<p class="belowheading"> Please fil the form below and we'll get back to you ASAP.</p>
 			<br>
+	 
 		<div class="form-row">
 			<div class="form-group col-md-6">
-				<input type="text" class="form-control" placeholder="NAME" id="contactForm_name" required>
+				<input type="text" class="form-control" placeholder="NAME" id="contactForm_name" name="name" required>
 			</div>
 			<div class="form-group col-md-6">
-				<input type="email" class="form-control" placeholder="EMAIL" id="contactForm_email" required>
+				<input type="email" class="form-control" placeholder="EMAIL" id="contactForm_email" name="Email" required>
 			</div>
 		</div>
 	</div>
 	<div class="form-group">
-		<input type="text" class="form-control" placeholder="SUBJECT" id="contactForm_subject" required>	
+		<input type="text" class="form-control" placeholder="SUBJECT" id="contactForm_subject" name="SUBJECT" required>	
 	</div>
 		<div class="form-group">
-			<textarea class="form-control" rows="7"placeholder="MESSAGE" id="contactForm_message"></textarea>
+			<textarea class="form-control" rows="7"placeholder="MESSAGE" id="contactForm_message" name="message"></textarea>
 		</div>
 			<div class="form-group row">
 				<div class="col-sm-10">
@@ -274,38 +469,40 @@
                     <h5>Get started</h5>
                     <ul>
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">Sign up</a></li>
-                        <li><a href="#">Downloads</a></li>
+                        <!-- <li><a href="#">Sign up</a></li>
+                        <li><a href="#">Downloads</a></li> -->
                     </ul>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-sm-2 sidebutton">
                     <h5>About us</h5>
                     <ul>
-                        <li><a href="#">Company Information</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">Reviews</a></li>
-                    </ul>
+                        <!-- <li><a href="#">Company Information</a></li> -->
+						<li><a href="#contact">Contact us</a></li>
+						<li><a href="/aboutus">About the Developers</a></li>
+					</ul>
+                        <!-- <li><a href="#">Reviews</a></li> -->
+                   
                 </div>
-                <div class="col-sm-2">
+                <!-- <div class="col-sm-2">
                     <h5>Support</h5>
                     <ul>
                         <li><a href="#">FAQ</a></li>
                         <li><a href="#">Help desk</a></li>
                         <li><a href="#">Forums</a></li>
                     </ul>
-                </div>
+                </div> -->
                 <div class="col-sm-3">
                     <div class="social-networks">
                         <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
                         <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
                         <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
                     </div>
-                    <button type="button" class="btntxt btn btn-default">Contact us</button>
+                    <button type="button" class="btntxt btn btn-default"><a href = "/aboutus"> Who made this?</a></button>
                 </div>
             </div>
         </div>
         <div class="footer-copyright">
-            <p>© 2018 Copyright Text </p>
+            <p>© 2019 Copyright Text </p>
         </div>
     </footer>
 

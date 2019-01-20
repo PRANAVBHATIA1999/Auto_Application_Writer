@@ -8,7 +8,7 @@ import writer as writer
 
 app = Flask(__name__)
 
-
+ 
 @app.route('/', methods=['GET', 'POST'])
 def application():
     if request.method == 'GET':
@@ -28,20 +28,59 @@ def application():
 
         return send_file(f, as_attachment=True, attachment_filename='application.doc')
 
-        # Strings
+@app.route('/visaform', methods=['GET', 'POST'])
+def visaform():
+    if request.method == 'GET':
+        return render_template("application.html", rand=str(Random.randint(0, 1000000)))
+    if request.method == 'POST':
+        address = request.form['address']
+        first_name = request.form['fname']
+        last_name = request.form['lname']
+        senders_class = request.form['senders_cl']
+        rno = request.form['rno']
+        date_from = request.form['date_frm']
+        date_till = request.form['date_till']
+        country_name = request.form['country_name'] #NEW
+        purp_visit = request.form['purp_visit'] #NEW
+        app_date = request.form['app_date']
+        f = writer.createVisaForm(address, first_name, last_name, senders_class, rno, date_from, date_till, app_date, purp_visit, country_name)
+        f.seek(0)
 
-        # para1 + address + brk +  para2 + app_date + para3 + para4 + para5a + days + para5b + date_from + to +
-        # date_till + para5c + para6 + brk + first_name + space + last_name + brk + senders_class + brk + rno
+        return send_file(f, as_attachment=True, attachment_filename='application.doc')
 
-        # next line
+
+@app.route('/participation', methods=['GET','POST'])
+def participation():
+        if request.method == 'GET':
+                 return render_template("application.html", rand=str(Random.randint(0, 1000000)))
+        if request.method == 'POST':
+                address= request.form['address']
+                first_name = request.form['fname']
+                last_name = request.form['lname']
+                senders_class = request.form['senders_cl']
+                rno = request.form['rno']
+                date_from = request.form['date_from']
+                date_till = request.form['date_till']
+                fest_name = request.form['fest_name']
+                college_name_fest = request.form['college_name_fest']
+                compet_name = request.form['compet_name']
+                no_of_parti = request.form['no_of_parti']
+                app_date = request.form['app_date']
+                f = writer.createPartiForm(address, first_name, last_name, senders_class, rno, date_from, date_till, fest_name, college_name_fest, compet_name, no_of_parti, app_date)
+                f.seek(0)
+
+                return send_file(f, as_attachment=True, attachment_filename='application.doc')
+
+
+
 
 # return render_template("application.html",rand=str(Random.randint(0,1000000)))
 
 
 @app.route('/aboutus')
 def aboutus():
-    rand_number = str(Random.randint(0, 1000000))
-    return render_template("aboutus.html", rand_number)
+    # rand_number = str(Random.randint(0, 1000000))
+    return render_template("aboutus.html",rand=str(Random.randint(0, 1000000)))
 
 
 @app.route('/contact')
@@ -50,6 +89,11 @@ def contactus():
         # request.form
         return
 
+#Form UI designing
+
+@app.route('/testing')
+def testing():
+      return render_template("form_testing.html",rand=str(Random.randint(0, 1000000)))
 
 
 @app.route('/profile', methods=['GET', 'POST'])

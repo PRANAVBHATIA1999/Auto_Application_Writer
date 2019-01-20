@@ -38,5 +38,5 @@ function getFormData(evt) {
 
     console.log(data);
 }
-
+// sure about the below line? Yess, this is for the conatct form, not related to the application writer okay
 document.getElementById('contactForm').onsubmit = getFormData;
