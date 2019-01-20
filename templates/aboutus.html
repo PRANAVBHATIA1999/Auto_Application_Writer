@@ -12,7 +12,7 @@
     <link href="{{url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 	<script src="{{url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
-     Custom styles for this template 
+     <!-- Custom styles for this template  -->
     <link href="{{url_for('static', filename='css/scrolling-nav.css')}}" rel="stylesheet">
 
 		 <!-- My CSS  -->
@@ -140,52 +140,54 @@
 
 
 
-<div class="footer2">
-
-    <footer id="myFooter">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3">
-                    <h3 class="logo"><a href="#"> APPLICATION WRITER </a></h3>
-                </div>
-                <div class="col-sm-2">
-                    <h5>Get started</h5>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Sign up</a></li>
-                        <li><a href="#">Downloads</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-2">
-                    <h5>About us</h5>
-                    <ul>
-                        <li><a href="#">Company Information</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">Reviews</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-2">
-                    <h5>Support</h5>
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Help desk</a></li>
-                        <li><a href="#">Forums</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <div class="social-networks">
-                        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                        <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
+<div class="content_footer">
+    </div>
+        <footer id="myFooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h3 class="logo"><a href="#"> APPLICATION WRITER </a></h3>
                     </div>
-                    <button type="button" class="btntxt btn btn-default">Contact us</button>
+                    <div class="col-sm-2">
+                        <h5>Get started</h5>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <!-- <li><a href="#">Sign up</a></li>
+                            <li><a href="#">Downloads</a></li> -->
+                        </ul>
+                    </div>
+                    <div class="col-sm-2 sidebutton">
+                        <h5>About us</h5>
+                        <ul>
+                            <!-- <li><a href="#">Company Information</a></li> -->
+                            <li><a href="#contact">Contact us</a></li>
+                            <li><a href="/aboutus">About the Developers</a></li>
+                        </ul>
+                            <!-- <li><a href="#">Reviews</a></li> -->
+                       
+                    </div>
+                    <!-- <div class="col-sm-2">
+                        <h5>Support</h5>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Help desk</a></li>
+                            <li><a href="#">Forums</a></li>
+                        </ul>
+                    </div> -->
+                    <div class="col-sm-3">
+                        <div class="social-networks">
+                            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
+                        </div>
+                        <button type="button" class="btntxt btn btn-default"><a href = "/aboutus"> Who made this?</a></button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="footer-copyright">
-            <p>© 2018 Copyright Text </p>
-        </div>
-    </footer>
+            <div class="footer-copyright">
+                <p>© 2019 Copyright Text </p>
+            </div>
+        </footer>
 
 </div>
 </body>
