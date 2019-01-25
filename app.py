@@ -23,7 +23,8 @@ def application():
         date_till = request.form['date_till']
         days = request.form['no_days']
         app_date = request.form['app_date']
-        f = writer.create(address, first_name, last_name, senders_class, rno, date_from, date_till, days, app_date)
+        selected_value = request.form['selected_value']
+        f = writer.create(address, first_name, last_name, senders_class, rno, date_from, date_till, days, app_date, selected_value)
         f.seek(0)
 
         return send_file(f, as_attachment=True, attachment_filename='application.doc')
@@ -38,12 +39,13 @@ def visaform():
         last_name = request.form['lname']
         senders_class = request.form['senders_cl']
         rno = request.form['rno']
-        date_from = request.form['date_frm']
+        date_from = request.form['date_from']
         date_till = request.form['date_till']
         country_name = request.form['country_name'] #NEW
         purp_visit = request.form['purp_visit'] #NEW
         app_date = request.form['app_date']
-        f = writer.createVisaForm(address, first_name, last_name, senders_class, rno, date_from, date_till, app_date, purp_visit, country_name)
+        selected_value = request.form['selected_value']
+        f = writer.createVisaForm(address, first_name, last_name, senders_class, rno, date_from, date_till, app_date, purp_visit, country_name, selected_value)
         f.seek(0)
 
         return send_file(f, as_attachment=True, attachment_filename='application.doc')
@@ -66,7 +68,9 @@ def participation():
                 compet_name = request.form['compet_name']
                 no_of_parti = request.form['no_of_parti']
                 app_date = request.form['app_date']
-                f = writer.createPartiForm(address, first_name, last_name, senders_class, rno, date_from, date_till, fest_name, college_name_fest, compet_name, no_of_parti, app_date)
+                selected_value = request.form['selected_value']
+                print(selected_value)
+                f = writer.createPartiForm(address, first_name, last_name, senders_class, rno, date_from, date_till, fest_name, college_name_fest, compet_name, no_of_parti, app_date, selected_value)
                 f.seek(0)
 
                 return send_file(f, as_attachment=True, attachment_filename='application.doc')

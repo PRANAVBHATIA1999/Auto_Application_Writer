@@ -3,9 +3,9 @@ from io import BytesIO
 import docx
 
 
-def create(address, first_name, last_name, senders_class, rno, date_from, date_till, days, app_date):
+def create(address, first_name, last_name, senders_class, rno, date_from, date_till, days, app_date, selected_value):
     doc = docx.Document()
-    doc.add_paragraph('The Dean')
+    doc.add_paragraph(selected_value)
     doc.add_paragraph(address)
     doc.add_paragraph('')
     doc.add_paragraph('Date: ' + app_date)
@@ -21,7 +21,7 @@ def create(address, first_name, last_name, senders_class, rno, date_from, date_t
     doc.add_paragraph('')
     doc.add_paragraph('')
     doc.add_paragraph('Yours obediently,')
-    doc.add_paragraph(first_name + last_name)
+    doc.add_paragraph(first_name + ' ' + last_name)
     doc.add_paragraph(senders_class)
     doc.add_paragraph(rno)
     f = BytesIO()
@@ -30,9 +30,9 @@ def create(address, first_name, last_name, senders_class, rno, date_from, date_t
 
 
 
-def createVisaForm(address, first_name, last_name, senders_class, rno, date_from, date_till, app_date, purp_visit, country_name): 
+def createVisaForm(address, first_name, last_name, senders_class, rno, date_from, date_till, app_date, purp_visit, country_name, selected_value): 
     doc = docx.Document()
-    doc.add_paragraph('The Dean')
+    doc.add_paragraph(selected_value)
     doc.add_paragraph(address)
     doc.add_paragraph('')
     doc.add_paragraph('Date: ' + app_date)
@@ -45,16 +45,16 @@ def createVisaForm(address, first_name, last_name, senders_class, rno, date_from
     doc.add_paragraph('')
     doc.add_paragraph('')
     doc.add_paragraph('Yours obediently,')
-    doc.add_paragraph(first_name + last_name)
+    doc.add_paragraph(first_name + ' ' + last_name)
     doc.add_paragraph(senders_class)
     doc.add_paragraph(rno)
     f = BytesIO()
     doc.save(f)
     return f
 
-def createPartiForm(address, first_name, last_name, senders_class, rno, date_from, date_till, fest_name, college_name_fest, compet_name, no_of_parti, app_date):
+def createPartiForm(address, first_name, last_name, senders_class, rno, date_from, date_till, fest_name, college_name_fest, compet_name, no_of_parti, app_date, selected_value):
     doc = docx.Document()
-    doc.add_paragraph('The Dean')
+    doc.add_paragraph(selected_value)
     doc.add_paragraph(address)
     doc.add_paragraph('')
     doc.add_paragraph('Date: ' + app_date)
@@ -67,7 +67,7 @@ def createPartiForm(address, first_name, last_name, senders_class, rno, date_fro
     doc.add_paragraph('')
     doc.add_paragraph('')
     doc.add_paragraph('Yours obediently,')
-    doc.add_paragraph(first_name + last_name)
+    doc.add_paragraph(first_name + ' ' + last_name)
     doc.add_paragraph(senders_class)
     doc.add_paragraph(rno)
     f = BytesIO()

@@ -44,7 +44,7 @@
 	<!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Application Writer</a>
+        <a class="navbar-brand js-scroll-trigger" href="/">Application Writer</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -114,7 +114,7 @@
 			
 		</div>
 			<div class="text-center btn_space">
-	<button type="button" class=" btncustom btn  btn-primary btn-xl  "> <a href = "#know_more">Know More</a></button>
+	<button type="button" class=" btncustom btn  btn-primary btn-xl  "> <a href ="#know_more">Know More</a></button>
 		</div>
 		</div>
 
@@ -156,7 +156,7 @@
                 <div class="formui">
                         <form action="/" method="POST">
                             <div class="row col-md-12">
-                                    <div class="input-group mb-3">
+                                    <!-- <div class="input-group mb-3">
                                             <div class="input-group-prepend">
                                                 <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
                                                 <div class="dropdown-menu">
@@ -165,7 +165,18 @@
                                                 </div>
                                             </div>
                                             <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Name or College/School Address" name="address">
-                                     </div>
+																		 </div> -->
+																		 <div class="input-group mb-3">
+																						<div>
+																						<select name="selected_value" class="form-control">
+																					
+																						<option value="The Dean"> The Dean </option>
+																						<option value="The Principal"> The Principal </option>
+																					</select>
+																					</div>
+																				<!-- </div> -->
+																				<input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Name or College/School Address" name="address">
+																		 </div>
                                         <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text">Sender's Name:</span>
@@ -243,7 +254,7 @@
 													<div class="input-group-prepend">
 													  <span class="input-group-text" id="inputGroup-sizing-default">Visit Purpose: </span>
 													</div>
-													<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Purpose Of Visit">
+													<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name = "purp_visit" placeholder="Purpose Of Visit">
 												</div>
 												<!-- <div class="col-md-12"> -->
 													<div class="input-group">
@@ -273,15 +284,16 @@
 												</div>
 										<div class="row col-md-12" >
 												<div class="input-group mb-3">
-														<div class="input-group-prepend">
-														  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
-														  <div class="dropdown-menu">
-															<a class="dropdown-item" href="#">The Dean</a>
-															<a class="dropdown-item" href="#">The Principal</a>
-														  </div>
-														</div>
+																<div>
+																<select name="selected_value" class="form-control">
+														
+																<option value="The Dean"> The Dean </option>
+																<option value="The Principal"> The Principal </option>
+															</select>
+															</div>
+														<!-- </div> -->
 														<input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Name or College/School Address" name="address">
-												</div>
+												 </div>
 					
 												<label for="inputEmail3" class="col-sm-2 col-form-label">Application submit date</label>
 												<div class="col-sm-10">
@@ -310,13 +322,19 @@
 						<form action="/participation" method="POST">       
 									<div class="row col-md-12">
 										<div class="input-group mb-3">
-												<div class="input-group-prepend">
-													<button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
-													<div class="dropdown-menu">
-														<a class="dropdown-item" href="#">The Dean</a>
-														<a class="dropdown-item" href="#">The Principal</a>
+												<!-- <div class="input-group-prepend">
+													<button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button> -->
+													<!-- <div class="dropdown-menu"> -->
+														<div>
+														<select name="selected_value" class="form-control">
+														 <!-- <option value="The Dean" name="de"> The Dean </option>
+														 <option value = "The Principal" name = "pr"> The Principal </option> -->
+														<!-- <a class="dropdown-item" href="#">The Principal</a> -->
+														<option value="The Dean"> The Dean </option>
+														<option value="The Principal"> The Principal </option>
+													</select>
 													</div>
-												</div>
+												<!-- </div> -->
 												<input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Name or College/School Address" name="address">
 										 </div>
 											<div class="input-group">
@@ -489,7 +507,7 @@
                     <h5>About us</h5>
                     <ul>
                         <!-- <li><a href="#">Company Information</a></li> -->
-						<li><a href="#contact">Contact us</a></li>
+						<li><a href="/aboutus">Contact us</a></li>
 						<li><a href="/aboutus">About the Developers</a></li>
 					</ul>
                         <!-- <li><a href="#">Reviews</a></li> -->
